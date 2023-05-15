@@ -1,0 +1,14 @@
+form input, textarea {
+    background-color: #1F1F38;
+    border: 1px solid #49A9EF;
+    border-radius: 5px;
+}
+form input {
+    height: 50px;
+}
+.container contact__container {
+    display: inline-flex;
+}
+form {
+    display: block;
+}
