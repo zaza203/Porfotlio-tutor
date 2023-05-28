@@ -45,7 +45,7 @@ const Contact = () => {
               <h4>LinkedIn</h4>
               <h5>Profile</h5>
               <a
-                href="https://www.linkedin.com/in/brown-djomo-844b96164/"
+                href="https://www.https://www.linkedin.com/in/zaza-einstein-263666258/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -58,7 +58,7 @@ const Contact = () => {
               <h4>Whatsapp</h4>
               <h5>Direct message</h5>
               <a
-                href="https://web.whatsapp.com/send?phone=+237657268549"
+                href="https://web.whatsapp.com/send?phone=+237674065007"
                 target="_blank"
                 rel="noreferrer"
               >

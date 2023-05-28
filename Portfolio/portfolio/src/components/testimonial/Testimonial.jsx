@@ -1,11 +1,11 @@
 import React from "react";
 import "./testimonial.css";
 import IMG from "../../assets/Zagido-removebg-preview.png";
-import AV1 from "../../assets/avat1.JPG";
-import AV2 from "../../assets/avat2.jpg";
-import AV3 from "../../assets/avat3.JPG";
-import AV4 from "../../assets/avat4.JPG";
-import AV5 from "../../assets/avat5.JPG";
+import AV1 from "../../assets/Zagido.jpg";
+import AV2 from "../../assets/Zagido.jpg";
+import AV3 from "../../assets/Zagido-removebg-preview.png";
+import AV4 from "../../assets/Zagido.jpg";
+import AV5 from "../../assets/Zagido-removebg-preview.png";
 
 // import Swiper core and required modules
 import { Pagination, Navigation, Scrollbar, A11y } from 'swiper';
