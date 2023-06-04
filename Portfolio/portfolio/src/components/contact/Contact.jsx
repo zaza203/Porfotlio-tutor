@@ -1,27 +1,48 @@
-import React from 'react'
-import './contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {AiOutlineLinkedin} from 'react-icons/ai'
 import {BsWhatsapp} from 'react-icons/bs'
-import {useRef} from 'react'
-import emailjs from 'emailjs-com'
+import {React, useState} from 'react'
+import './contact.css'
+import axios from "axios"
+//import { Modal } from '../modal/Modal'
+export const Contact = () => {
 
-const Contact = () => {
-  const form = useRef();
+const [openModal, setOpenModal] = useState(false)
 
-  const sendEmail = (e) => {
-      e.preventDefault();
 
-      emailjs.sendForm('service_5vuauza', 'template_fdnnl56', form.current, 'EmSdUNQzQuxkUqGWx')
-      e.target.reset() 
-      .then((result) => {
-        console.log(result.text)
-      },(error) =>{
-        console.log(error.text);
-      });
-  };
-    return (
-      <section id="contact">
+
+const [msg, setMsg] = useState('')
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+
+function openModalBtnn() {
+  setOpenModal(true);
+}
+
+ const submit= async(e)=>{
+  e.preventDefault()
+  setMsg('');
+  setName('');
+  setEmail('');
+
+  try {
+
+      await axios.post("http://localhost:4000/", {
+        name,
+        email,
+        msg
+      })
+
+  }
+  catch(e) {
+    console.log(e)
+  }
+
+  openModalBtnn()
+}
+
+  return (
+    <section id="contact">
         <h5>Get in touch</h5>
         <h2>Contact me</h2>
 
@@ -30,7 +51,7 @@ const Contact = () => {
             <article className="contact__option">
               <MdOutlineEmail className="contact__option__icon" />
               <h4>Email</h4>
-              <h5>myEmail@gmail.com</h5>
+              <h5>einsteinzaza00@gmail.com</h5>
               <a
                 href="mailto:aldenovpoutine99@gmail.com"
                 target="_blank"
@@ -58,7 +79,7 @@ const Contact = () => {
               <h4>Whatsapp</h4>
               <h5>Direct message</h5>
               <a
-                href="https://web.whatsapp.com/send?phone=+237674065007"
+                href="https://web.whatsapp.com/send?phone=+237691715866"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -67,29 +88,28 @@ const Contact = () => {
             </article>
           </div>
 
-          <form ref={form} onSubmit={sendEmail}>
-            <input type="text" name="name" placeholder="full name" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="your email"
-              required
-            />
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="your message"
-              required
-            ></textarea>
-            <button type="submit" className="btn btn-primary">
-              Testified
-            </button>
-          </form>
-        </div>
-      </section>
-    );
+        <div className="contactform">
+            <form action="POST">
+              <h2>Send Message</h2>
+              <div className="inputBox">
+                <input type="text" name="" required="required" value={name} onChange={(e)=>{setName(e.target.value)}} />
+                <span>Full Name</span>
+              </div>
+              <div className="inputBox">
+                <input type="email" name="" required="required" value={email} onChange={(e)=>{setEmail(e.target.value)}} />
+                <span>Email</span>
+              </div>
+              <div className="inputBox">
+                <textarea name="" required="required" value={msg} onChange={(e)=>{setMsg(e.target.value)}} ></textarea>
+                <span>Type your message...</span>
+              </div>
+              <div className="inputBox">
+                <input type="submit" onClick={submit} value="Send" className="btn btn-primary" />
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+  )
 }
-
 export default Contact

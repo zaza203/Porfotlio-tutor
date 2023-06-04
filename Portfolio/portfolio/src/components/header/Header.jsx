@@ -2,7 +2,7 @@ import React from 'react'
 import './header.css'
 import './CTA'
 import CTA from './CTA' //here we import the CTA component inside our header
-import me from '../../assets/Zagido-removebg-preview.png'
+import me from '../../assets/zaza.png'
 import HeaderSocial from './HeaderSocial' //import of headerSocial component
 
 const Header = () => {

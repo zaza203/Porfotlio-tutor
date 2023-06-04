@@ -1,6 +1,6 @@
-nav{
+nav {
     background: rgba(0, 0, 0, 0.3);
-    width:max-content;
+    width: max-content;
     display: block;
     padding: 0.7rem 1.7rem;
     z-index: 2;
@@ -10,8 +10,12 @@ nav{
     bottom: 2rem;
     display: flex;
     gap: .8rem;
+    margin-left: 550px;
     border-radius: 3rem;
     backdrop-filter: blur(15px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Update this line */
 }
 
 nav a{

@@ -40,10 +40,10 @@ const Footer = () => {
           <a href="https://linkedin.com" target="blank">
             <BsLinkedin />
           </a>
-          <a href="https://github.com" target="blank">
+          <a href="https://github.com/zaza203" target="blank">
             <FaGithub />
           </a>
-          <a href="https://facebook.com" target="blank">
+          <a href="https://facebook.com/?_rdc=1&_rdr" target="blank">
             <FaFacebookF />
           </a>
           <a href="https://twitter.com" target="blank">
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         <div className="copyRight">
-            <h3>&copy; copyright BD 2023</h3>
+            <h3>&copy; copyright ZAZA 2023</h3>
         </div>
       </div>
     );
