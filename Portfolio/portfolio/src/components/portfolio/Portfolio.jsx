@@ -11,7 +11,7 @@ export const Portfolio = () => {
   const [data, setData] = useState([]);
 
     useEffect(()=>{
-        axios.get("https://zany-plum-oyster-robe.cyclic.app/api/portfolio").then(response => {
+        axios.get(" https://scary-tan-rhinoceros.cyclic.app/api/portfolio").then(response => {
             const formattedData = response.data.data.map(item => ({
                 id:item._id,
                 image: item.image,
