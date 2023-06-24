@@ -10,15 +10,21 @@ const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-      e.preventDefault();
-
-      emailjs.sendForm('service_5vuauza', 'template_fdnnl56', form.current, 'EmSdUNQzQuxkUqGWx')
-      e.target.reset() 
-      .then((result) => {
-        console.log(result.text)
-      },(error) =>{
-        console.log(error.text);
-      });
+    e.preventDefault();
+  
+    emailjs
+      .sendForm('service_5vuauza', 'template_fdnnl56', form.current, 'EmSdUNQzQuxkUqGWx')
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  
+    e.target.reset();
+    
   };
     return (
       <section id="contact">
@@ -30,7 +36,7 @@ const Contact = () => {
             <article className="contact__option">
               <MdOutlineEmail className="contact__option__icon" />
               <h4>Email</h4>
-              <h5>myEmail@gmail.com</h5>
+              <h5>einsteinzaza00@gmail.com</h5>
               <a
                 href="mailto:einsteinzaza00@gmail.com"
                 target="_blank"
@@ -45,7 +51,7 @@ const Contact = () => {
               <h4>LinkedIn</h4>
               <h5>Profile</h5>
               <a
-                href="https://www.linkedin.com/in/brown-djomo-844b96164/"
+                href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noreferrer"
               >

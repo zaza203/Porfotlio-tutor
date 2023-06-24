@@ -6,6 +6,9 @@ import AV2 from "../../assets/Zagido.jpg";
 import AV3 from "../../assets/Zagido-removebg-preview.png";
 import AV4 from "../../assets/Zagido.jpg";
 import AV5 from "../../assets/Zagido-removebg-preview.png";
+import axios from 'axios'
+import {useEffect, useState} from 'react';
+
 
 // import Swiper core and required modules
 import { Pagination, Navigation, Scrollbar, A11y } from 'swiper';
@@ -62,6 +65,25 @@ export const Testimonial = () => {
       Cname: "Client 6",
     },
   ];
+
+  const [data, setData] = useState([]);
+
+  useEffect(()=>{
+      axios.get("https://powerful-cyan-underwear.cyclic.app/api/testimonial").then(response => {
+          const formattedData = response.data.data.map(item => ({
+              id:item._id,
+              image: item.image,
+              title: item.title,
+              github: item.github,
+              demo: item.demo
+          }));
+          setData(formattedData)            
+      }).catch(error => {
+          console.log("Error fetching portfolio data", error);
+      })
+  }, []);
+
+
   return (
     <section id="testimonial">
       <h5>Review from client</h5>
