@@ -63,7 +63,7 @@ const Services = () => {
             </li>
             <li>
               <BiCheck className='service__list-icon'></BiCheck>
-              <p>React</p>
+              <p>Django/RRF</p>
             </li>
          
           </ul>
@@ -71,7 +71,7 @@ const Services = () => {
             {/* WEB DEVELOPMENT ENDS*/}
          <article className="service">
           <div className="service__head">
-            <h3>Desktop Development</h3>
+            <h3>Desktop Development & Others</h3>
           </div>
 
           <ul className='service__list'>
@@ -85,15 +85,15 @@ const Services = () => {
             </li>
             <li>
               <BiCheck className='service__list-icon'></BiCheck>
-              <p>User Interface</p>
+              <p>NLP and NLTK</p>
             </li>
             <li>
               <BiCheck className='service__list-icon'></BiCheck>
-              <p>User Interface</p>
+              <p>Tensorflow</p>
             </li>
             <li>
               <BiCheck className='service__list-icon'></BiCheck>
-              <p>User Interface</p>
+              <p>Python for Data Analysis</p>
             </li>
           
           </ul>
