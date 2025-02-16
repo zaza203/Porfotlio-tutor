@@ -42,6 +42,13 @@ const Experience = () => {
               <small className='text-light'>Experienced</small>
               </div>
             </article>
+            <article className='experience__details'>
+              <BsPatchCheckFill className='experience__details-icon' />
+              <div>
+              <h4>Bootstrap</h4>
+              <small className='text-light'>Intermediate</small>
+              </div>
+            </article>
           </div>
         </div>
       
@@ -51,6 +58,13 @@ const Experience = () => {
         <div className="experience__backend">
           <h3>Backend Development</h3>
            <div className="experience__container">
+             <article className='experience__details'>
+              <BsPatchCheckFill />
+              <div>
+              <h4>Django/DRF</h4>
+              <small className='text-light'>Experienced</small>
+              </div>
+            </article>
             <article className='experience__details'>
               <BsPatchCheckFill />
               <div>
@@ -75,7 +89,7 @@ const Experience = () => {
             <article className='experience__details'>
               <BsPatchCheckFill />
               <div>
-              <h4>JAVA</h4>
+              <h4>Java Springboot</h4>
               <small className='text-light'>Master</small>
               </div>
             </article>
